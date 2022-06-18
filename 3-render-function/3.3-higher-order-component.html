@@ -29,7 +29,7 @@ function withAvatarURL (InnerComponent) {
       }
     },
     created() {
-      this.url = fetchURL(this.username, url => {
+      fetchURL(this.username, url => {
         this.url = url;
       })
     },
