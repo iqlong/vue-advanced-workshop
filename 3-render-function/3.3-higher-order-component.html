@@ -34,7 +34,7 @@ function withAvatarURL (InnerComponent) {
       })
     },
     render(h){
-      return h(Avatar, {
+      return h(InnerComponent, {
         props: {
           src: this.url
         }

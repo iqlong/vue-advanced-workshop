@@ -10,17 +10,15 @@
 <script>
 function createStore ({ state, mutations }) {
   return new Vue({
-    data: {
+    data:{
       state
     },
-    methods: {
-      commit (mutation) {
-        if (!mutations.hasOwnProperty(mutation)) {
-          throw new Error('Unknown mutation')
-        }
-        mutations[mutation](state)
+    methods:{
+      commit(id) {
+        mutations[id](this.state);
       }
     }
+
   })
 }
 
